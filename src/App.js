@@ -1,5 +1,6 @@
 import { Container } from "react-bootstrap";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 const App = () => {
   return (
     <>
@@ -7,9 +8,9 @@ const App = () => {
       <main className="py-3">
         <Container>
           <h1>Welcome to techverse</h1>
-          Testing
         </Container>
       </main>
+      <Footer b/>
     </>
   );
 }
