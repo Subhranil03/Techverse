@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import HomeScreen from './screens/HomeScreen';
+import Productscreen from './screens/Productscreen';
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -12,13 +13,15 @@ import {
 } from 'react-router-dom'
 import './assets/bootstrap.custom.css';
 
-const router =createBrowserRouter(
+const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index={true} path="/" element={<HomeScreen />} />
+      <Route path="/product/:id" element={<Productscreen />} />
     </Route>
   )
 )
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
